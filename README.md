@@ -218,11 +218,11 @@ show_best(bh_tune_grid, "rmse")
 #> # A tibble: 5 x 8
 #>    penalty mixture .metric .estimator  mean     n std_err .config
 #>      <dbl>   <dbl> <chr>   <chr>      <dbl> <int>   <dbl> <chr>  
-#> 1 5.69e- 6  0.0916 rmse    standard    3.66     5   0.171 Model01
-#> 2 7.37e- 4  0.356  rmse    standard    3.66     5   0.172 Model04
-#> 3 4.81e-10  0.147  rmse    standard    3.66     5   0.171 Model02
-#> 4 1.45e- 3  0.913  rmse    standard    3.66     5   0.173 Model10
-#> 5 2.66e- 7  0.531  rmse    standard    3.66     5   0.172 Model06
+#> 1 1.83e-10  0.0877 rmse    standard    3.64     5   0.160 Model01
+#> 2 8.84e- 9  0.174  rmse    standard    3.64     5   0.160 Model02
+#> 3 1.59e- 3  0.270  rmse    standard    3.64     5   0.160 Model03
+#> 4 4.16e- 7  0.463  rmse    standard    3.64     5   0.160 Model05
+#> 5 3.24e- 6  0.349  rmse    standard    3.64     5   0.160 Model04
 ```
 
 ``` r
@@ -242,8 +242,8 @@ collect_metrics(bh_last_fit)
 #> # A tibble: 2 x 3
 #>   .metric .estimator .estimate
 #>   <chr>   <chr>          <dbl>
-#> 1 rmse    standard       4.12 
-#> 2 rsq     standard       0.695
+#> 1 rmse    standard       3.94 
+#> 2 rsq     standard       0.805
 
 collect_predictions(bh_last_fit) %>%
   ggplot(aes(.pred, medv)) +
